@@ -1,0 +1,24 @@
+[Unit]
+Description=SpotSpace music streamer
+After=network.target
+
+[Service]
+Type=simple
+User=spotspace
+Group=spotspace
+WorkingDirectory=/opt/spotspace
+Environment=HOST=0.0.0.0
+Environment=PORT=5075
+# Uncomment once you have a domain + a reverse proxy terminating HTTPS in front of this:
+# Environment=COOKIE_SECURE=true
+ExecStart=/usr/bin/node server.js
+Restart=on-failure
+RestartSec=5
+# Basic sandboxing — this process only ever needs its own directory.
+NoNewPrivileges=true
+ProtectSystem=strict
+ReadWritePaths=/opt/spotspace/library
+ProtectHome=true
+
+[Install]
+WantedBy=multi-user.target

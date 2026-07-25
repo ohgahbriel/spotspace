@@ -1,0 +1,10 @@
+{
+  "name": "spotspace",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Spotify-style music streamer with MySpace-style artist profile pages — publish by dragging files in.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
