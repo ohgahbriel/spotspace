@@ -43,12 +43,11 @@ SSH in first:
 ssh -i /path/to/your-private-key ubuntu@<vm-public-ip>
 ```
 
-Then, on the VM, get SpotSpace into `/opt/spotspace`. Easiest if it's
-pushed to a git repo (ask to have this set up if you want it):
+Then, on the VM, get SpotSpace into `/opt/spotspace`:
 ```
 sudo mkdir -p /opt/spotspace
 sudo chown ubuntu:ubuntu /opt/spotspace
-git clone <your-repo-url> /opt/spotspace
+git clone https://github.com/ohgahbriel/spotspace.git /opt/spotspace
 ```
 Or, without git, copy it from your machine instead (run this on your own
 machine, not the VM):
