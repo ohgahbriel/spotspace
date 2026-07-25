@@ -1,0 +1,9 @@
+run = "node server.js"
+entrypoint = "server.js"
+
+[env]
+HOST = "0.0.0.0"
+
+[[ports]]
+localPort = 5075
+externalPort = 80

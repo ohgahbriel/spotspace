@@ -24,11 +24,16 @@ Environment variables (all optional, for deployment):
   this once the app is actually served over HTTPS (e.g. behind a reverse
   proxy), or logins will silently break.
 
-Deploying somewhere so other people can reach it? See
-[`deploy/DEPLOY.md`](deploy/DEPLOY.md) (Oracle Cloud Always Free — real
-persistent storage, no free-tier data loss surprises). Login, signup, and
-guestbook posting are all rate-limited per IP, which matters once this is
-actually reachable by strangers.
+Deploying somewhere so other people can reach it? Two free options:
+- [`deploy/DEPLOY.md`](deploy/DEPLOY.md) — Oracle Cloud Always Free (real
+  persistent storage, no free-tier data loss surprises; needs a card for
+  identity verification, never actually billed).
+- [`deploy/REPLIT.md`](deploy/REPLIT.md) — Replit (no card at all; free
+  Repls persist storage between runs, but may sleep when idle — check
+  Replit's current free-tier terms).
+
+Login, signup, and guestbook posting are all rate-limited per IP, which
+matters once this is actually reachable by strangers.
 
 ## How it works
 
